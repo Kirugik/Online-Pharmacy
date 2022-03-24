@@ -5,55 +5,59 @@ let products=[
         tag:'fabiflu',
         price:1292,
         incart:0
-
     },
+
     {
         name:'Oxygen Can',
         tag:'Oxygencan',
         price:450,
         incart:0
-
-
     },
+
     {
         name:'Vitamin C Chewable tablets',
         tag:'vitaminc',
         price:700,
         incart:0
     },
+
     {
         name:'Zincovit Tablet-15',
         tag:'zincvoit',
         price:84,
         incart:0
     },
+
     {
         name:'Remdesivir Antiviral Drug',
         tag:'remdesivir',
         price:899,
         incart:0
     },
+
     {
         name:'Alerfix Total SR Tablet',
         tag:'Alerfix',
         price:232,
         incart:0
     },
+
     {
         name:'Bresol-NS(Drops/spray)',
         tag:'bresol',
         price:45,
         incart:0
     },
+
     {
         name:'Alex Syrup Sugar Free',
         tag:'alex',
         price:110,
         incart:0
-    },
-
-
+    }
 ];
+
+
 for(let i=0;i<carts.length;i++){
     carts[i].addEventListener('click',()=>{
         cartNumbers(products[i]);

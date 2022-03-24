@@ -5,60 +5,63 @@ let products=[
         tag:'amlip',
         price:55,
         incart:0
-
     },
+
     {
         name:'Geminor MP 2mg Tablet 15',
         tag:'geminor',
         price:176,
         incart:0
-
-
     },
+
     {
         name:'Dolo 500 Paracetamol Tablet',
         tag:'pcm',
         price:12,
         incart:0
     },
+
     {
         name:'A To Z Ns New Tablet 15',
         tag:'a2z',
         price:105,
         incart:0
     },
+
     {
         name:'Cartigen Forte Plus, 10 Tablets',
         tag:'cartigen',
         price:409,
         incart:0
     },
+
     {
         name:'Venusia Max Lotion 300gm',
         tag:'venusia',
         price:607,
         incart:0
     },
+
     {
         name:'Pantop 40 MG Tablet',
         tag:'pantop',
         price:45,
         incart:0
     },
+
     {
         name:'Jalra M50/500',
         tag:'jalra',
         price:234,
         incart:0
     },
-    
-     
 ];
+
+
 for(let i=0;i<carts.length;i++){
     carts[i].addEventListener('click',()=>{
         cartNumbers(products[i]);
         totalcost(products[i]);
-
     })
 }
 function onLoadCartNumbers(){
@@ -145,8 +148,6 @@ function incr(e){
     localStorage.setItem('totalcost', cartcost);
     displaycart();
 }
-
-
 
 
 function displaycart(){
