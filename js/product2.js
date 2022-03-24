@@ -1,60 +1,55 @@
 let carts=document.querySelectorAll('.add-cart');
 let products=[
     {
-        name:'AMPLIP 10MG TAB',
-        tag:'amlip',
-        price:55,
+        name:'Benylin Dry Cough 100ml',
+        tag:'Benylin',
+        price:810,
+        incart:0
+    },
+    {
+        name:'Prednisolone Oral Route',
+        tag:'Prednisolone',
+        price:550,
+        incart:0
+    },
+    {
+        name:'Fluticasone Nasal Route',
+        tag:'Fluticasone',
+        price:740,
+        incart:0
+    },
+    {
+        name:'Glyburide-Metformin HCL',
+        tag:'Metformin',
+        price:3499,
         incart:0
     },
 
     {
-        name:'Geminor MP 2mg Tablet 15',
-        tag:'geminor',
-        price:176,
+        name:'Omeprazole And Sodium Bicarbonate',
+        tag:'Omeprazole',
+        price:680,
         incart:0
-    },
 
+    },
     {
-        name:'Dolo 500 Paracetamol Tablet',
-        tag:'pcm',
-        price:12,
+        name:'Losartan-Hydrochlorothiazide',
+        tag:'Losartan',
+        price:370,
         incart:0
     },
-
     {
-        name:'A To Z Ns New Tablet 15',
-        tag:'a2z',
-        price:105,
+        name:'Albuterol Sulfate 90 Mcg',
+        tag:'Albuterol',
+        price:220,
         incart:0
     },
-
     {
-        name:'Cartigen Forte Plus, 10 Tablets',
-        tag:'cartigen',
-        price:409,
+        name:'Lisinopril 20 Mg-Hydrochlorothiazide',
+        tag:'Lisinopril',
+        price:435,
         incart:0
-    },
-
-    {
-        name:'Venusia Max Lotion 300gm',
-        tag:'venusia',
-        price:607,
-        incart:0
-    },
-
-    {
-        name:'Pantop 40 MG Tablet',
-        tag:'pantop',
-        price:45,
-        incart:0
-    },
-
-    {
-        name:'Jalra M50/500',
-        tag:'jalra',
-        price:234,
-        incart:0
-    },
+    }
 ];
 
 

@@ -1,58 +1,53 @@
 let carts=document.querySelectorAll('.add-cart');
 let products=[
     {
-        name:'FABIFLU 200MG 34S TAB',
-        tag:'fabiflu',
-        price:1292,
+        name:'Benylin Dry Cough 100ml',
+        tag:'Benylin',
+        price:810,
+        incart:0
+    },
+    {
+        name:'Prednisolone Oral Route',
+        tag:'Prednisolone',
+        price:550,
+        incart:0
+    },
+    {
+        name:'Fluticasone Nasal Route',
+        tag:'Fluticasone',
+        price:740,
+        incart:0
+    },
+    {
+        name:'Glyburide-Metformin HCL',
+        tag:'Metformin',
+        price:3499,
         incart:0
     },
 
     {
-        name:'Oxygen Can',
-        tag:'Oxygencan',
-        price:450,
+        name:'Omeprazole And Sodium Bicarbonate',
+        tag:'Omeprazole',
+        price:680,
+        incart:0
+
+    },
+    {
+        name:'Losartan-Hydrochlorothiazide',
+        tag:'Losartan',
+        price:370,
         incart:0
     },
-
     {
-        name:'Vitamin C Chewable tablets',
-        tag:'vitaminc',
-        price:700,
+        name:'Albuterol Sulfate 90 Mcg',
+        tag:'Albuterol',
+        price:220,
         incart:0
     },
-
     {
-        name:'Zincovit Tablet-15',
-        tag:'zincvoit',
-        price:84,
-        incart:0
-    },
-
-    {
-        name:'Remdesivir Antiviral Drug',
-        tag:'remdesivir',
-        price:899,
-        incart:0
-    },
-
-    {
-        name:'Alerfix Total SR Tablet',
-        tag:'Alerfix',
-        price:232,
-        incart:0
-    },
-
-    {
-        name:'Bresol-NS(Drops/spray)',
-        tag:'bresol',
-        price:45,
-        incart:0
-    },
-
-    {
-        name:'Alex Syrup Sugar Free',
-        tag:'alex',
-        price:110,
+        name:'Lisinopril 20 Mg-Hydrochlorothiazide',
+        tag:'Lisinopril',
+        price:435,
         incart:0
     }
 ];
@@ -62,7 +57,6 @@ for(let i=0;i<carts.length;i++){
     carts[i].addEventListener('click',()=>{
         cartNumbers(products[i]);
         totalcost(products[i]);
-
     })
 }
 function onLoadCartNumbers(){
@@ -71,6 +65,7 @@ function onLoadCartNumbers(){
         document.querySelector('.cart span').textContent=productNumbers;
     }
 }
+
 function cartNumbers(product){
 
     let productNumbers=localStorage.getItem('cartNumbers');

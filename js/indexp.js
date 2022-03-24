@@ -1,90 +1,65 @@
 let carts=document.querySelectorAll('.add-cart');
 let products=[
     {
-        name:'Accu-Chek Instant glucometer with 10 test strips FREE',
-        tag:'sugar',
-        price:1440,
+        name:'Benylin Dry Cough 100ml',
+        tag:'Benylin',
+        price:810,
         incart:0
     },
     {
-        name:'Omron Most Advance Digital Blood Pressure Monitor',
-        tag:'omronbp',
-        price:2999,
+        name:'Prednisolone Oral Route',
+        tag:'Prednisolone',
+        price:550,
         incart:0
     },
     {
-        name:'Thermocare nebulizer machine for kids and adult Nebulizer',
-        tag:'nebulizer',
-        price:2399,
+        name:'Fluticasone Nasal Route',
+        tag:'Fluticasone',
+        price:740,
         incart:0
     },
     {
-        name:'Thermometer & Pulse Oximeter',
-        tag:'thermo',
+        name:'Glyburide-Metformin HCL',
+        tag:'Metformin',
         price:3499,
         incart:0
     },
 
     {
-        name:'FABIFLU 200MG 34S TAB',
-        tag:'fabiflu',
-        price:1292,
+        name:'Omeprazole And Sodium Bicarbonate',
+        tag:'Omeprazole',
+        price:680,
         incart:0
 
     },
     {
-        name:'Oxygen Can',
-        tag:'Oxygencan',
-        price:450,
-        incart:0
-
-
-    },
-    {
-        name:'Vitamin C Chewable tablets',
-        tag:'vitaminc',
-        price:700,
+        name:'Losartan-Hydrochlorothiazide',
+        tag:'Losartan',
+        price:370,
         incart:0
     },
     {
-        name:'Zincovit Tablet-15',
-        tag:'zincvoit',
-        price:84,
+        name:'Albuterol Sulfate 90 Mcg',
+        tag:'Albuterol',
+        price:220,
         incart:0
     },
     {
-        name:'Remdesivir Antiviral Drug',
-        tag:'remdesivir',
-        price:899,
+        name:'Lisinopril 20 Mg-Hydrochlorothiazide',
+        tag:'Lisinopril',
+        price:435,
         incart:0
-    },
-    {
-        name:'Alerfix Total SR Tablet',
-        tag:'Alerfix',
-        price:232,
-        incart:0
-    },
-    {
-        name:'Bresol-NS(Drops/spray)',
-        tag:'bresol',
-        price:45,
-        incart:0
-    },
-    {
-        name:'Alex Syrup Sugar Free',
-        tag:'alex',
-        price:110,
-        incart:0
-    },
-
+    }
 ];
+
+
 for(let i=0;i<carts.length;i++){
     carts[i].addEventListener('click',()=>{
         cartNumbers(products[i]);
         totalcost(products[i]);
-
     })
 }
+
 function onLoadCartNumbers(){
     let productNumbers=localStorage.getItem('cartNumbers');
     if(productNumbers){
@@ -169,9 +144,6 @@ function incr(e){
     localStorage.setItem('totalcost', cartcost);
     displaycart();
 }
-
-
-
 
 function displaycart(){
     let cartitems= localStorage.getItem("productsInCart");
