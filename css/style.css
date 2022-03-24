@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --white: #fff;
   --black: #222;
   --pink: #f60091;
@@ -7,7 +7,7 @@
   --grey-alt: #d1e2e9;
   --yellow: #ffd800;
   --green: #59b210;
-}
+} */
 
 *,
 *::before,
@@ -80,7 +80,7 @@ li {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: var(--grey-alt);
+  background-color: #d1e2e9;
   overflow: hidden;
 }
 
@@ -427,7 +427,7 @@ li {
   left: 50%;
   bottom: -20%;
   transform: translate(-50%, -50%);
-  background-color: var(--pink);
+  background-color: #f60091;
   width: 50%;
   height: 0.4rem;
   z-index: 1;
