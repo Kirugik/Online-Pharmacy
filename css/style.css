@@ -294,7 +294,7 @@ li {
   }
 }
 
-/* @media only screen and (max-width: 996px) {
+@media only screen and (max-width: 996px) {
   .header {
     min-height: 70vh;
   }
@@ -335,13 +335,8 @@ li {
   .hero-content a {
     padding: 1rem 3rem;
   }
-} */
-
-
-
-
-/* Adverts */
-/* .section {
+}
+*/ Adverts .section {
   padding: 10rem 0 5rem 0;
 }
 
@@ -411,11 +406,7 @@ li {
 .advert-box .content h4 {
   font-size: 1.5rem;
   text-transform: capitalize;
-} */
-
-
-
-
+}
 
 /* Featured Products */
 .title {
@@ -695,7 +686,6 @@ li {
   }
 }
 
-
 #contact {
   background: #efefef;
   padding-top: 40px;
@@ -780,8 +770,6 @@ form span {
   background-color: #243a6f;
   color: #fff;
 }
-
-
 
 /*cart*/
 .cart .table {
