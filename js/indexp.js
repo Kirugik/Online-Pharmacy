@@ -157,8 +157,8 @@ function displaycart(){
     cartitems = JSON.parse(cartitems);
     let productcontainer =document.querySelector("tbody");
     let cartcost=localStorage.getItem('totalcost');
-    console.log(cartcost);
-    if( cartitems && productcontainer){
+    // console.log(cartcost);
+    if(cartitems && productcontainer){
         productcontainer.innerHTML = '';
         Object.values(cartitems).map((item, index) =>{
             productcontainer.innerHTML +=`

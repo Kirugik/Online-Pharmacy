@@ -325,7 +325,9 @@ li {
     padding: 1rem 3rem;
   }
 }
-*/ Adverts .section {
+
+/* Adverts  */
+/* .section {
   padding: 10rem 0 5rem 0;
 }
 
@@ -395,7 +397,7 @@ li {
 .advert-box .content h4 {
   font-size: 1.5rem;
   text-transform: capitalize;
-}
+} */
 
 /* Featured Products */
 .title {
@@ -422,7 +424,7 @@ li {
   z-index: 1;
 }
 
-/* Product */
+/* Products */
 .product-center {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -496,7 +498,7 @@ li {
 
 .product-header .icons span {
   background-color: #fff;
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   display: block;
   border-radius: 50%;
   padding: 1.5rem 1.6rem;
@@ -595,7 +597,7 @@ li {
 }
 
 /* Testimonials */
-.testimonial-center {
+/* .testimonial-center {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 6rem;
@@ -650,10 +652,10 @@ li {
 
 .testimonial h4 {
   margin-top: 1rem;
-}
+} */
 
 /* Brands */
-.brands-center {
+/* .brands-center {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 3rem;
@@ -700,7 +702,7 @@ li {
   margin: 10px;
   color: #007bff;
   font-weight: bold;
-}
+} */
 
 /* All Products */
 .section .top {
