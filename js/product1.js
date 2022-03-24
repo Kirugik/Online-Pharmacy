@@ -52,20 +52,21 @@ let products=[
     }
 ];
 
-
+//Looping through all products' click events
 for(let i=0;i<carts.length;i++){
     carts[i].addEventListener('click',()=>{
         cartNumbers(products[i]);
         totalcost(products[i]);
     })
 }
+// Incrementing cart numbers
 function onLoadCartNumbers(){
     let productNumbers=localStorage.getItem('cartNumbers');
     if(productNumbers){
         document.querySelector('.cart span').textContent=productNumbers;
     }
 }
-
+//Increasing item quantities while inside cart
 function cartNumbers(product){
 
     let productNumbers=localStorage.getItem('cartNumbers');
@@ -96,17 +97,17 @@ function setItems(product){
         product.incart = 1;
         cartitems = {
             [product.tag]:product
-
         }
     }
     localStorage.setItem("productsInCart", JSON.stringify(cartitems));
 }
+//calculate total cost of cart items
 function totalcost(product){
     // console.log("the product price is", product.price);
     let cartcost=localStorage.getItem('totalcost');
 
-    console.log("my cart is ", cartcost);
-    console.log(typeof cartcost);
+    // console.log("my cart is ", cartcost);
+    // console.log(typeof cartcost);
     if(cartcost !=null){
        cartcost= parseInt(cartcost);
        localStorage.setItem("totalcost", cartcost+product.price);
@@ -116,7 +117,7 @@ function totalcost(product){
     }
 
 }
-// Add here
+//While in cart, decreasing quantities on clicking up arrow: 
 function decr(e){
     let cartitems= JSON.parse(localStorage.getItem("productsInCart"));
     let cartcost=localStorage.getItem('totalcost');
@@ -135,6 +136,7 @@ function decr(e){
     localStorage.setItem('totalcost', cartcost);
     displaycart();
 }
+//While in cart, increasing quantities on clicking up arrow:
 function incr(e){
     let cartitems= JSON.parse(localStorage.getItem("productsInCart"));
     let cartcost=localStorage.getItem('totalcost');
@@ -152,7 +154,7 @@ function displaycart(){
     cartitems = JSON.parse(cartitems);
     let productcontainer =document.querySelector("tbody");
     let cartcost=localStorage.getItem('totalcost');
-    console.log(cartcost);
+    // console.log(cartcost);
     if( cartitems && productcontainer){
         productcontainer.innerHTML = '';
         Object.values(cartitems).map((item, index) =>{
@@ -162,7 +164,7 @@ function displaycart(){
                             <td>
                                 <div class="main">
                                     <div class="d-flex">
-                     <!--W=145 H=98--> <img src="./images/${item.tag}.jpg">
+                     <!--W=145 H=98--> <img src="../images/new-images/${item.tag}.jpeg">
                                     </div>
                                     <div class="des">
                                         <p>${item.name}</p>
@@ -207,4 +209,4 @@ function displaycart(){
 }
 
 onLoadCartNumbers();
-displaycart()
+displaycart();

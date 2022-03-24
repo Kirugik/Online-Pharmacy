@@ -110,8 +110,8 @@ function totalcost(product){
     // console.log("the product price is", product.price);
     let cartcost=localStorage.getItem('totalcost');
 
-    console.log("my cart is ", cartcost);
-    console.log(typeof cartcost);
+    // console.log("my cart is ", cartcost);
+    // console.log(typeof cartcost);
     if(cartcost !=null){
        cartcost= parseInt(cartcost);
        localStorage.setItem("totalcost", cartcost+product.price);
@@ -167,7 +167,7 @@ function displaycart(){
                             <td>
                                 <div class="main">
                                     <div class="d-flex">
-                     <!--W=145 H=98--> <img src="./images/${item.tag}.jpg">
+                     <!--W=145 H=98--> <img src="./images/new-images${item.tag}.jpeg">
                                     </div>
                                     <div class="des">
                                         <p>${item.name}</p>
@@ -210,6 +210,17 @@ function displaycart(){
             }
     }
 }
-
 onLoadCartNumbers();
 displaycart();
+
+
+    //confirmation message on submitting 
+// let firstName = document.getElementById("shipping-first-name"); 
+// let town = document.getElementById("shipping-city"); 
+// let displayMessage = document.getElementById("confirmation-message");
+
+// if (($("shipping-first-name").val() && $("shipping-last-name").val() && $("shipping-phone").val() && $("shipping-city").val()) !== ""){
+//     displayMessage.innerHTML = `<p>${firstName}, order will be delivered to ${town}.</p>`
+// } else {
+//     displayMessage = `<p>Please fill all the required details.</p>`
+// }
