@@ -182,7 +182,7 @@ function displaycart(){
                                 </div>
                             </td>
                             <td>
-                                <h6>₹${item.incart * item.price}</h6>
+                                <h6>Ksh.${item.incart * item.price}</h6>
                             </td>
                         </tr>
              `
@@ -193,10 +193,10 @@ function displaycart(){
                 <div class="checkout">
                     <ul>
                         <li class="subtotal">subtotal
-                            <span>₹${cartcost}</span>
+                            <span>Ksh.${cartcost}</span>
                         </li>
                         <li class="cart-total">Total
-                        <span>₹${cartcost}</span></li>
+                        <span>Ksh.${cartcost}</span></li>
                     </ul>
                     <a href="shipping.html"class="proceed-btn">Proceed to Checkout</a>
                 </div>
