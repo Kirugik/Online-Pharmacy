@@ -52,7 +52,7 @@ let products=[
     }
 ];
 
-
+//Looping through all products' click events
 for(let i=0;i<carts.length;i++){
     carts[i].addEventListener('click',()=>{
         cartNumbers(products[i]);
@@ -60,12 +60,15 @@ for(let i=0;i<carts.length;i++){
     })
 }
 
+// Incrementing cart numbers
 function onLoadCartNumbers(){
     let productNumbers=localStorage.getItem('cartNumbers');
     if(productNumbers){
         document.querySelector('.cart span').textContent=productNumbers;
     }
 }
+
+//Increasing item quantities while inside cart
 function cartNumbers(product){
 
     let productNumbers=localStorage.getItem('cartNumbers');
@@ -101,6 +104,8 @@ function setItems(product){
     }
     localStorage.setItem("productsInCart", JSON.stringify(cartitems));
 }
+
+//calculate total cost of cart items
 function totalcost(product){
     // console.log("the product price is", product.price);
     let cartcost=localStorage.getItem('totalcost');
@@ -114,9 +119,9 @@ function totalcost(product){
     else{
         localStorage.setItem("totalcost", product.price);
     }
-
 }
-// Add here
+
+//While in cart, decreasing quantities on clicking up arrow: 
 function decr(e){
     let cartitems= JSON.parse(localStorage.getItem("productsInCart"));
     let cartcost=localStorage.getItem('totalcost');
@@ -134,6 +139,8 @@ function decr(e){
     localStorage.setItem('totalcost', cartcost);
     displaycart();
 }
+
+//While in cart, increasing quantities on clicking up arrow:
 function incr(e){
     let cartitems= JSON.parse(localStorage.getItem("productsInCart"));
     let cartcost=localStorage.getItem('totalcost');
@@ -179,7 +186,7 @@ function displaycart(){
                                 </div>
                             </td>
                             <td>
-                                <h6>₹${item.incart * item.price}</h6>
+                                <h6>Ksh.${item.incart * item.price}</h6>
                             </td>
                         </tr>
              `
@@ -190,10 +197,10 @@ function displaycart(){
                 <div class="checkout">
                     <ul>
                         <li class="subtotal">subtotal
-                            <span>₹${cartcost}</span>
+                            <span>Ksh.${cartcost}</span>
                         </li>
                         <li class="cart-total">Total
-                        <span>₹${cartcost}</span></li>
+                        <span>Ksh.${cartcost}</span></li>
                     </ul>
                     <a href="shipping.html"class="proceed-btn">Proceed to Checkout</a>
                 </div>
